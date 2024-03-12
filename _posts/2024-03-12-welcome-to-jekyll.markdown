@@ -22,7 +22,7 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 {% endhighlight %}
 
-![image tooltip here](/images/apple.jpg)
+![image tooltip here](/images/apple.png)
 
 
 
