@@ -1,27 +1,24 @@
-# Marat
+# Libretto - Jekyll Theme
 
-![Marat](https://raw.githubusercontent.com/JohnCoene/marat/master/assets/img/screenshot.png)
+Libretto is a responsive one-column Jekyll theme with classic styling and careful typographic details.
 
-Revive the values of the Enlightenment with `marat`.
+Based on the [Libretto Wordpress theme](https://wordpress.org/themes/libretto/).
 
-See [Marat in action](http://marat.john-coene.com).
+## Install and Test
 
-Marat is heavily inspired by [L'Ami du peuple](https://en.wikipedia.org/wiki/L%27Ami_du_peuple), a newspaper written by [Jean-Paul Marat](https://en.wikipedia.org/wiki/Jean-Paul_Marat) during the French Revolution, in which he was a j vocal advocate for the rights of man and liberty.
+1. Download or clone the repo
+  - `git clone git@github.com:ferrolho/jekyll-theme-libretto.git`
+2. Enter the folder
+  - `cd jekyll-theme-libretto/`
+3. Start Jekyll server
+  - `jekyll serve --watch`
+4. Access via
+  - http://127.0.0.1:4000/jekyll-theme-libretto/
 
-1. Adapt the `_config.yml` file
-2. Replace/Delete the posts
-3. Change `about.md`
-4. Change or add your links in the `nav.yml` file located in the `_data` folder
-5. Replace the `favicon.ico`
-6. Customise the `404.md` page in the root directory
-6. Run `bundle exec jekyll serve --watch`
-7. Enlighten the masses!
+## Demo
 
-> Unlike Marat's pamphlets the theme is fully responsive.
+- https://ferrolho.github.io/jekyll-theme-libretto/
 
-Plugins:
+## Preview
 
-Marat includes the following plugins.
-
-* [jekyll-roman](https://github.com/paulrobertlloyd/jekyll-roman)
-* [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+![Theme preview](http://i.imgur.com/2ZCmoKo.png)
