@@ -1,13 +1,18 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ site.title }}</title>
+    {% include header.html %}
+    {% seo %}
+  </head>
+  <body>
 
-<header class="post-header">
-	<h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-</header>
+    {% include nav.html %}
+    <div class="container">
+      <div class="center">
+        {{ content }}
+      </div>
+    </div>
 
-<article class="error" itemscope itemtype="http://schema.org/BlogPosting">
-	<div itemprop="articleBody">
-		{{ content }}
-	</div>
-</article>
+  </body>
+</html>
