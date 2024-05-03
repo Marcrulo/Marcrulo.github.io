@@ -1,41 +1,23 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-url: https://Marcrulo.github.io
-# Only necessary when hosting your site in a sub-directory. Project sites hosted on GitHub Pages are the common use-case of this variable.
-baseurl: # Ex: /project-page
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
+# Site settings
+title: Your Blog Title
+description: '' # write a nice description for your blog
+baseurl: '/cayman-blog' # the subpath of your site, e.g. /blog
+url: 'https://adueck.github.io' # the base hostname & protocol for your site http://www.example.com
+# google_analytics: 'UA-XXXXXX-X'
+twitter_username: 'twitter_username'
 
-# Header Option
-# header: large
-
-sass:
-    style: compressed
-
+# Build settings
 markdown: kramdown
-highlighter: rouge
-plugins: [jekyll-paginate]
-paginate: 5
 
-navigation:
-    - title: Home
-      url: /index.html
-    - title: About
-      url: /about
-    - title: Contact
-      url: /contact
+permalink: '/:title/'
 
-social:
-    github: brianmaierjr
-    twitter: brianmaierjr
-    facebook: brianmaierjr
-    email: brimaidesigns@gmail.com
-    linkedin: brianmaierjr
-    youtube: RickAstleyYT
-    tumblr: i-am-a-fish
+gems: [jekyll-paginate]
 
-google_analytics: "UA-58263416-1"
-
-disqus:
-    shortname: brianmaierjr
+paginate: 10

@@ -1,26 +1,61 @@
 ---
 layout: default
-title: Game of Thrones
 ---
 
-<div class="home" id="home">
-	<h1 class="pageTitle">Recent Posts</h1>
-	<h2>A Saga of Intrigue, Power, and Betrayal</h2>
-	<p class="justify">
-"Game of Thrones," based on George R.R. Martin's epic fantasy series "A Song of Ice and Fire," captivated audiences worldwide with its intricate plotlines, complex characters, and breathtaking visuals. Spanning eight seasons, the show became a cultural phenomenon, blending elements of medieval history, political intrigue, and supernatural elements in a rich tapestry of storytelling.
 
-Set in the fictional continents of Westeros and Essos, "Game of Thrones" unfolds against the backdrop of a power struggle among noble houses vying for control of the Iron Throne, the symbol of ultimate authority in the Seven Kingdoms of Westeros. At the heart of the series is the looming threat of the White Walkers, an ancient and supernatural enemy from the North, threatening to plunge the realm into eternal winter and darkness.
+{% for post in paginator.posts %}
 
-The narrative weaves together the stories of numerous characters, each with their own ambitions, strengths, and weaknesses. At the center of the intrigue is the Stark family of Winterfell, whose patriarch, Eddard Stark, is drawn into the machinations of the capital, King's Landing, when he becomes the Hand of the King to his childhood friend, Robert Baratheon. However, Eddard's honor and integrity clash with the ruthless political landscape of King's Landing, leading to his downfall and setting off a chain of events that reverberate throughout the series.
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-As the power struggle intensifies, viewers are introduced to a vast array of characters, including the cunning and manipulative Lannisters, the exiled Targaryens seeking to reclaim the throne, the enigmatic and mystical Stannis Baratheon, and the resilient and resourceful members of the Night's Watch defending the realm from beyond the Wall.
+    <div class="main-content" itemprop="articleBody">
 
-Central to the narrative are the themes of loyalty, betrayal, and the quest for power. Characters navigate treacherous alliances, shifting loyalties, and moral ambiguity as they strive to survive and thrive in a world where honor is often a liability and trust is a rare commodity. The series explores the consequences of unchecked ambition and the sacrifices made in the pursuit of power, as well as the resilience of the human spirit in the face of adversity.
+<a name="blog{{ forloop.index }}"></a>
 
-"Game of Thrones" is renowned for its production values, including its stunning cinematography, intricate costume design, and elaborate set pieces. From the towering castles of the noble houses to the icy wastelands beyond the Wall, the show immerses viewers in a visually stunning and meticulously crafted world.
+  <header class="post-header">
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}"><h3 class="post-title" itemprop="name headline">{{ post.title }}</h3> </a>
 
-Despite its acclaim, "Game of Thrones" faced criticism for its handling of certain character arcs and plot developments, particularly in its later seasons. The series finale, in particular, divided fans and sparked heated debate over its resolution of long-standing conflicts and character arcs.
+  </header>
 
-Nevertheless, "Game of Thrones" remains a landmark achievement in television history, pushing the boundaries of the fantasy genre and leaving an indelible mark on popular culture. Its complex characters, epic storytelling, and unforgettable moments continue to resonate with audiences long after the final credits have rolled, ensuring its legacy as one of the greatest television series of all time.
-</p>
+    {{ post.content }}
+
+<p class="post-meta" style="text-align: right; color: rgb(152,152,152);"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ post.author }}</span></span>{% endif %} • <label for="our-popup-{{ forloop.index }}"><i class="fa fa-share"></i> Share / Permalink</label></p>
+
+	<span>
+		<input type="checkbox" id="our-popup-{{ forloop.index }}" class="smoosh" />
+
+		<!-- invisible; when checked, the popup opens -->
+		<label for="our-popup-{{ forloop.index }}" class="overlay"></label>
+
+		<!-- the popup starts here -->
+		<div class="overlay-dialogue">
+			<h3>Share "{{ post.title  }}"</h3>
+
+            <!-- Target -->
+<input id="foo{{ forloop.index }}" value="{{ site.url }}{{ post.url }}" type="url">
+
+<!-- Trigger -->
+<button class="share-btn" data-clipboard-target="#foo{{ forloop.index }}">COPY LINK
+</button>
+            <p style="text-align: center;">Share on: <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}" target="_blank">Facebook</a> • <a href="https://twitter.com/share?url={{ site.url }}{{ post.url }}&amp;text={{ post.title }}" target="_blank">Twitter</a>
+
+			<p style="text-align: center;"><label for="our-popup-{{ forloop.index }}">cancel</label></p>
+		</div>
+	</span>
+
+  </div>
+
+</article>
+
+{% endfor %}
+
+<div class="pagination" style="text-align: center;">
+
+  {% if paginator.next_page %}
+    <h2><a href="{{ paginator.next_page_path }}" class="next">- more posts -</a></h2>
+  {% endif %}
+
+  {% if paginator.previous_page %}
+    <h2><a href="{{ paginator.previous_page_path }}" class="previous">- previous page -</a></h2>
+  {% endif %}
+
 </div>
