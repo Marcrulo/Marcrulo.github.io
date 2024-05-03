@@ -6,10 +6,10 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Your Blog Title
-description: '' # write a nice description for your blog
-baseurl: '/cayman-blog' # the subpath of your site, e.g. /blog
-url: 'https://adueck.github.io' # the base hostname & protocol for your site http://www.example.com
+title: Game of Thrones
+description: 'Decription...' # write a nice description for your blog
+baseurl: '' # the subpath of your site, e.g. /blog
+url: 'https://marcrulo.github.io' # the base hostname & protocol for your site http://www.example.com
 # google_analytics: 'UA-XXXXXX-X'
 twitter_username: 'twitter_username'
 
