@@ -139,6 +139,11 @@ a:hover {
 @media screen and (max-width: 42em) {
   .project-tagline {
     font-size: 1rem; } }
+<!-- Styles for the main content -->
+.main-content section {
+  padding: 10px 10px;}
+<!-- Styles for the main content -->
+
 
 .main-content :first-child {
   margin-top: 0; }
