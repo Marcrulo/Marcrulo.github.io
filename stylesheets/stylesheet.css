@@ -9,6 +9,10 @@ body {
   line-height: 1.6;
   color: #32383B;}
 
+  h1, h2, h3, p {
+    font-family: "Times New Roman", Times, serif;
+}
+
 a {
   color: #62a2c9;
   text-decoration: none;}
