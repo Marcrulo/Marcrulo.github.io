@@ -9,8 +9,15 @@ body {
   line-height: 1.6;
   color: #32383B;}
 
-  h1, h2, h3, p {
-    font-family: "Times New Roman", Times, serif;
+
+
+@font-face {
+  font-family: 'GoT';
+  src: url('myfont.Game of Thrones.ttf') format('truetype');
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'GoT', sans-serif;
 }
 
 a {
