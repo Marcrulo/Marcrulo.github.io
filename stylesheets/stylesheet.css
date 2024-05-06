@@ -13,7 +13,7 @@ body {
 
 @font-face {
   font-family: 'GoT';
-  src: url('myfont/Game of Thrones.ttf') format('truetype');
+  src: url('Game of Thrones.ttf') format('truetype');
 }
 
 h1, h2, h3, h4, h5, h6 {
