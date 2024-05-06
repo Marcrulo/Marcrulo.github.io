@@ -330,6 +330,6 @@ a:hover {
     .centered-image {
       display: block;
       margin: 0 auto;
-      max-width: 300px; /* Adjust the maximum width as needed */
+      max-width: 50px; /* Adjust the maximum width as needed */
   }
   
